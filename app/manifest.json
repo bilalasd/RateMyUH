@@ -1,0 +1,24 @@
+{
+    "name": "RateMyUH",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Show RateMyUH ratings on peoplesoft class search page",
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "default_locale": "en",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://my.uh.edu/*"
+            ],
+            "js": [
+                "src/jquery-2.1.1.js",
+                "src/mutation-summary.js",
+                "src/content.js"
+            ]
+        }
+    ]
+}
